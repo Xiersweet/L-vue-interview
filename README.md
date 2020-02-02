@@ -168,3 +168,8 @@ MVP的view触发P的业务逻辑，然后P再回调改变View的显示的操作�
     - 被监听的数据需要在data中定义
 - 当一个属性受多个属性影响的时候就需要用到computed
 - 当一条数据影响多条数据的时候就需要用watch
+
+### 14.谈谈你对vue生命周期的理解？
+- vue组件从创建到销毁的过程，就称之为生命周期
+- 通常我们所说的生命周期分为8个：分别为在初始化实例时，默认调用的beforeCreate、created、beforeMount、mounted这四个钩子函数，还有当更新数据时，更新之前会触发beforeUpdate这个钩子函数，更新完成之后，会触发updated这个钩子函数；当vue的实例销毁时，会调用beforeDestroy和destroyed这两个钩子函数。除此之外还有不常用的activated、deactivated、errorCaptured这三个钩子函数
+- 钩子函数的暴露，给了开发者能在精确的环节做相应的逻辑处理的机会
