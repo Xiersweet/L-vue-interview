@@ -173,3 +173,11 @@ MVP的view触发P的业务逻辑，然后P再回调改变View的显示的操作�
 - vue组件从创建到销毁的过程，就称之为生命周期
 - 通常我们所说的生命周期分为8个：分别为在初始化实例时，默认调用的beforeCreate、created、beforeMount、mounted这四个钩子函数，还有当更新数据时，更新之前会触发beforeUpdate这个钩子函数，更新完成之后，会触发updated这个钩子函数；当vue的实例销毁时，会调用beforeDestroy和destroyed这两个钩子函数。除此之外还有不常用的activated、deactivated、errorCaptured这三个钩子函数
 - 钩子函数的暴露，给了开发者能在精确的环节做相应的逻辑处理的机会
+
+### 15.谈谈你对vuex使用及其理解？
+- Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+- vuex在main.js中与vue根实例一同初始化，需要配置：state、mutations、actions、getters（可选）
+    - state是vuex需要管理的元数据声明
+    - mutations用于修改state中的数据（单项）
+    - 如果需要同时修改多个state中的数据，则在actions中commit多个mutation进行修改
+    - getters可以对state中的数据进行包装、计算后返回，可以理解为vuex的计算属性，非必须配置项
