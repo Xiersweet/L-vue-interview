@@ -203,3 +203,10 @@ MVP的view触发P的业务逻辑，然后P再回调改变View的显示的操作�
     - 在创建vnode的过程中，会去检测vnode是否包含model属性，如果包含，会对model对象进行解析
     - 此时会在组件实例的data属性中追加一个名叫‘value’的属性，和监听model对象中可能会包含的事件名称（默认为input事件）
     - 当事件被触发时，会调用model对象中的callback方法，完成数据值更新（与普通元素类似）
+
+### 18.vue-router导航钩子有哪些？
+1. 全局守卫： router.beforeEach
+2. 全局解析守卫： router.beforeResolve
+3. 全局后置钩子： router.afterEach
+4. 路由独享的守卫： beforeEnter
+5. 组件内的守卫： beforeRouteEnter、beforeRouteUpdate (2.2 新增)、beforeRouteLeave
